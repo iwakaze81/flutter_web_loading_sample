@@ -1,0 +1,22 @@
+{
+  "dart.flutterSdkPath": ".fvm/versions/stable",
+  "dart.debugExternalPackageLibraries": true,
+  "dart.debugSdkLibraries": false,
+  "[dart]": {
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true,
+    "editor.rulers": [
+      80
+    ],
+    "editor.selectionHighlight": false,
+    "editor.suggestSelection": "first",
+    "editor.tabCompletion": "onlySnippets",
+    "editor.wordBasedSuggestions": "off"
+  },
+  "dart.lineLength": 80,
+  "dart.showTodos": true,
+  "files.watcherExclude": {
+    "**/.dart_tool/**": true,
+    "**/.fvm/**": true
+  }
+}
