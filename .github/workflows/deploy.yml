@@ -23,11 +23,10 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Setup Flutter
-        uses: subosito/flutter-action@v2
+      - name: Setup Flutter with FVM
+        uses: kuhnroyal/flutter-fvm-config-action/setup@fcdb62b682dade6f0d9e0c6eae6acc647ca8c31d # v3
         with:
-          flutter-version-file: .fvmrc
-          cache: true
+          path: '.fvmrc'
 
       - name: Install dependencies
         run: flutter pub get
