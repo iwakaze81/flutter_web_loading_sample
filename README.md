@@ -2,6 +2,8 @@
 
 Flutter Web アプリケーションのローディング画面とスプラッシュアニメーションの実装サンプルです。
 
+**🚀 デモサイト**: https://iwakaze81.github.io/flutter_web_loading_sample/
+
 ## 概要
 
 このプロジェクトは、Flutter Web アプリケーションの初期化中に表示されるローディング画面を実装したサンプルです。`flutter_bootstrap.js` の `onEntrypointLoaded` を使用して、Flutter エンジンの初期化完了時にローディング画面をスムーズにフェードアウトさせます。
