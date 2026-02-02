@@ -189,6 +189,47 @@ setTimeout(() => {
 - **Flutter Web (Profile Mode)**: パフォーマンス測定用
 - **Flutter Web (Release Mode)**: リリースビルドの確認用
 
+## GitHub Actions
+
+このプロジェクトには2つの GitHub Actions ワークフローが設定されています。
+
+### Analyze ワークフロー (.github/workflows/analyze.yml)
+
+プルリクエストやプッシュ時に自動実行され、コード品質をチェックします。
+
+**実行内容:**
+- コードフォーマットの検証
+- `flutter analyze` によるコード解析
+- `flutter test` によるテスト実行
+
+**トリガー:**
+- main, develop ブランチへの push
+- main, develop ブランチへの pull request
+
+### Deploy ワークフロー (.github/workflows/deploy.yml)
+
+main ブランチにマージされたときに自動的に GitHub Pages にデプロイします。
+
+**実行内容:**
+1. Flutter Web アプリをビルド（リリースモード）
+2. ビルド成果物を GitHub Pages にデプロイ
+
+**トリガー:**
+- main ブランチへの push
+
+### GitHub Pages の設定
+
+初回デプロイ前に、以下の設定が必要です：
+
+1. GitHub リポジトリの **Settings** > **Pages** に移動
+2. **Source** を **GitHub Actions** に設定
+3. main ブランチにプッシュすると自動的にデプロイが開始されます
+
+デプロイ後、以下の URL でアクセスできます：
+```
+https://iwakaze81.github.io/flutter_web_loading_sample/
+```
+
 ## ライセンス
 
 このプロジェクトはサンプルコードです。自由に使用・改変してください。
